@@ -323,13 +323,13 @@ input {
 }
 
 .services__item {
-    border: var(--border-color);
+    border: 2px solid var(--border-color);
     padding: 2.5rem 1.25rem 1.875rem;
     text-align: center;
 }
 
 .icon__box {
-    border: var(--border-color);
+    border: 1.5px solid var(--border-color);
     width: 82px;
     height: 82px;
     border-radius: 50%;
@@ -350,12 +350,22 @@ input {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--text-color);
     animation: service-dot 2s linear infinite;
+    animation-play-state: paused;
 }
 
-@keyframes services__dot {
-    
+.services__item:hover .services__dot {
+    animation-play-state: running;
+}
+
+@keyframes service-dot {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
 }
 
 .dot {
@@ -366,4 +376,61 @@ input {
     position: absolute;
     top: 0;
     left: 0.9rem;
+}
+
+.services__title {
+    margin-bottom: 0.8em;
+}
+
+/* ********** Resume  ********** */
+.resume__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3.75rem;
+}
+
+.resume__title {
+    color: var(--bg-color-alt);
+    letter-spacing: 0.4em;
+    margin-bottom: 2.8em;
+}
+
+.resume__item {
+    border-left: 2px solid var(--primary-color);
+    padding-left: 1.6rem;
+    position: relative;
+}
+
+.resume__item:not(:last-child) {
+    padding-bottom: 3rem;
+}
+
+.resume__item::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color);
+    position: absolute;
+    left: -0.56rem;
+    background-color: var(--bg-color);
+}
+
+.resume__subtitle {
+    color: var(--primary-color);
+    margin-bottom: 0.36em;
+}
+
+.resume__date {
+    color: var(--text-color-alt);
+    margin-bottom: 0.7em;
+}
+
+.resume__description {
+    text-align: justify;
+}
+
+/* ********** Resume  ********** */
+.skills__container {
+    grid-template-columns: repeat(2, 445px);
+    column-gap: 7rem;
 }
