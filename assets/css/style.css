@@ -301,6 +301,10 @@ input {
     transition: 0.3s;
 }
 
+.downloadCv {
+    font-family: var(--roboto-font);
+}
+
 .button:hover {
     background-color: var(--primary-color-alt);
 }
@@ -310,4 +314,56 @@ input {
     align-items: flex-start;
     column-gap: 0.3rem;
 
+}
+
+/* ********** Services  ********** */
+.services__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.875rem;
+}
+
+.services__item {
+    border: var(--border-color);
+    padding: 2.5rem 1.25rem 1.875rem;
+    text-align: center;
+}
+
+.icon__box {
+    border: var(--border-color);
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: 1.25rem;
+    position: relative;
+    display: flex;
+}
+
+.services__icon {
+    width: 32px;
+    margin: auto;
+}
+
+.services__dot {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-color);
+    animation: service-dot 2s linear infinite;
+}
+
+@keyframes services__dot {
+    
+}
+
+.dot {
+    width: 13px;
+    height: 13px;
+    background-color: var(--title-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0.9rem;
 }
