@@ -298,7 +298,7 @@
                     </div>
 
                     <div class="resume__item">
-                        
+
                         <h3 class="resume__subtitle text-sm">TECH UNIVERSITY</h3>
                         <p class="resume__date text-sm">2024 - 2026</p>
                         <p class="resume__description text-lg">Awesome developer, lorem ipsum dolor sit amet, conse ctetur adipisicing elit, sed do eius- mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -433,16 +433,16 @@
 
             <div class="project__categories">
 
-                <button class="category__btn text-xs active-work">ALL</button>
-                <button class="category__btn text-xs">MOBILE APPS</button>
-                <button class="category__btn text-xs">WEB-SITES</button>
-                <button class="category__btn text-xs">LANDING PAGES</button>
+                <button class="category__btn text-xs active-work" data-filter="all">ALL</button>
+                <button class="category__btn text-xs" data-filter=".app">MOBILE APPS</button>
+                <button class="category__btn text-xs" data-filter=".web">WEB-SITES</button>
+                <button class="category__btn text-xs" data-filter=".landing">LANDING PAGES</button>
 
             </div>
 
             <div class="projects__container grid">
 
-                <div class="project__item grid">
+                <div class="project__item grid mix app">
                     <img src="assets/img/project-1.png" alt="" class="project__img">
 
                     <div class="project__data">
@@ -462,7 +462,7 @@
                     </div>
                 </div>
 
-                <div class="project__item grid">
+                <div class="project__item grid mix web">
                     <img src="assets/img/project-2.png" alt="" class="project__img">
 
                     <div class="project__data">
@@ -482,7 +482,7 @@
                     </div>
                 </div>
 
-                <div class="project__item grid">
+                <div class="project__item grid mix landing">
                     <img src="assets/img/project-3.png" alt="" class="project__img">
 
                     <div class="project__data">
@@ -509,7 +509,10 @@
 
 
     </main>
-        
+    
+    <!--***** JS *****-->
+    <script src="assets/js/mixitup.min.js"></script>
+
     
 
     <!--***** JS *****-->
