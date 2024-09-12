@@ -1,10 +1,22 @@
 /* ***** Mixitup Filter ***** */
 
-var mixer = mixitup(containerEl, {
+let mixerProjects = mixitup('.projects__container', {
     selectors: {
-        target: '.blog-item'
+        target: '.project__item',
     },
     animation: {
-        duration: 300
-    }
+        duration: 300,
+    },
 });
+ 
+/* Active Work */
+
+
+const linkWork = document.querySelectorAll('.category__btn');
+
+function activeWork() {
+    linkWork.forEach((a) => a.classList.remove('active-work'));
+    this.classList.add('activework');
+}
+
+linkWork.forEach((a) => a.addEventListener('click', activeWork));
