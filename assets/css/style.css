@@ -783,6 +783,15 @@ input {
   bottom: 34%;
   left: 0;
   font-family: var(--mono-font);
+  color: #fff;
+}
+
+.color-light {
+  opacity: 0;
+}
+
+.color-dark {
+  opacity: 0.4;
 }
 
 .contact__button {
