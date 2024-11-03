@@ -57,7 +57,7 @@ const sendEmail = (e) => {
     contactMessage.classList.add("color-dark");
 
     // shows message
-    contactMessage.textContent = "Write all the input fields";
+    contactMessage.textContent = "Complete all the input fields";
   } else {
     // serviceID - templateID - #form - publickey
     emailjs
@@ -80,4 +80,10 @@ const sendEmail = (e) => {
   }
 };
 
-contactForm.addEventListener("submit", sendEmail);
+if (contactForm) {
+  contactForm.addEventListener("submit", sendEmail);
+} else {
+  console.error(
+    "Formulario no encontrado: revisa que el ID 'contact-form' esté correcto."
+  );
+}
